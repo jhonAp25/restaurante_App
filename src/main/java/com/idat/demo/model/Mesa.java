@@ -21,7 +21,5 @@ public class Mesa {
     private String nroMesa;
 
 
-    @ManyToOne
-    private DetallePedido detallePedido;
 
 }

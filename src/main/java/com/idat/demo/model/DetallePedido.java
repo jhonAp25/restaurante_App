@@ -23,8 +23,16 @@ public class DetallePedido {
     private Long id;
     private String cantidad;
 
+
     @ManyToOne
-    private Pedido  pedido;
+    private Plato plato;
+
+    @ManyToOne
+    private Mesa mesa;
+
+    @ManyToOne
+    private Mozo mozo;
+
 
 
 

@@ -25,6 +25,5 @@ public class Mozo {
     private String telefono;
     private String correo;
 
-    @ManyToOne
-    private DetallePedido detallePedido;
+
 }
