@@ -1,14 +1,12 @@
 package com.idat.demo.controller;
 
 
+import com.idat.demo.model.Plato;
 import com.idat.demo.service.PlatoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/plato")
@@ -22,5 +20,16 @@ public class PlatoController {
     @GetMapping
     public ResponseEntity<?>listado(){
         return new  ResponseEntity<>(service.list(), HttpStatus.OK);
+    }
+
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> busqueda(@PathVariable Long id){
+        return new ResponseEntity<>(service.findById(id), HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity<?> saved(@RequestBody Plato plato){
+        return new ResponseEntity<>(service.save(plato) , HttpStatus.OK);
     }
 }

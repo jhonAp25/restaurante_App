@@ -23,7 +23,5 @@ public class Plato {
     private Double precio;
 
 
-    @ManyToOne
-    private DetallePedido detallePedido;
 
 }

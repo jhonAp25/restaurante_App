@@ -18,7 +18,23 @@ public class PlatoService {
         return repository.findAll();
     }
 
-    private Plato save(Plato plato){
+    public Plato findById(Long id){
+        return repository.findById(id).orElse(null);
+    }
+
+    public Plato save(Plato plato){
+        return repository.save(plato);
+    }
+
+
+    public Plato update(Plato plato){
+        Plato plato1 = findById(plato.getId());
+        if (plato.getDescripcion() != null)
+            plato1.setDescripcion(plato.getDescripcion());
+
+        if (plato.getPrecio() != 0)
+            plato1.setPrecio(plato.getPrecio());
+
         return repository.save(plato);
     }
 
