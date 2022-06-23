@@ -32,4 +32,9 @@ public class PlatoController {
     public ResponseEntity<?> saved(@RequestBody Plato plato){
         return new ResponseEntity<>(service.save(plato) , HttpStatus.OK);
     }
+
+    @PutMapping
+    public ResponseEntity<?> actualizar(@RequestBody Plato plato){
+        return new ResponseEntity<>(service.update(plato) , HttpStatus.OK);
+    }
 }

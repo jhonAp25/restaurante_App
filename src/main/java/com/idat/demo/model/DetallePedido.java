@@ -21,7 +21,7 @@ public class DetallePedido {
     @Id
     @GeneratedValue
     private Long id;
-    private String cantidad;
+    private int cantidad;
 
 
     @ManyToOne
