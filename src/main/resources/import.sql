@@ -1,9 +1,7 @@
-insert into Plato ( descripcion, precio) values (  'arros con pollo', 10 );
-insert into Plato ( descripcion, precio) values (  'anticuchos', 15 );
-insert into Plato (descripcion, precio) values (   'tallarines', 20);
-insert into Plato ( descripcion, precio) values (  'aji de gallina', 20 );
-insert into Plato ( descripcion, precio) values (   'estofado', 20 );
-insert into Plato ( descripcion, precio) values (   'pollo al horno', 20 );
+
+insert into Plato (nombre, descripcion, precio, image) values (  'panqueques', 'Delicioso plato acompaniado con miel', 20 , 'https://i.imgur.com/VuhPVac.jpg');
+insert into Plato ( nombre, descripcion, precio, image) values (  'Tacos mexicanos','El taco es una preparación culinaria muy popular de México que consiste en una tortilla, generalmente de maíz, que se dobla o se enrolla para contene', 20 ,'https://i.imgur.com/O3qFQ3O.jpg');
+
 
 insert into Mesa (nro_mesa, estado) values ( 'Mesa-01', true );
 insert into Mesa (nro_mesa, estado) values ( 'Mesa-02', false );

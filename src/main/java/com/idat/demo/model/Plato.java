@@ -18,8 +18,9 @@ public class Plato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    private String nombre;
     private String descripcion;
+    private String image;
     private Double precio;
 
 
