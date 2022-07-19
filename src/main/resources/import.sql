@@ -18,3 +18,6 @@ insert into Mesa (nro_mesa, estado) values ( 'Mesa-12', true );
 insert into Mesa (nro_mesa, estado) values ( 'Mesa-13', true );
 insert into Mesa (nro_mesa, estado) values ( 'Mesa-14', true );
 insert into Mesa (nro_mesa, estado) values ( 'Mesa-15', true );
+
+
+insert into Mozo (nombre , apellido , dni, telefono, correo) values ( 'Jorge Carlos' , 'Velasques Bustillos' , '75689966', '897654321', 'Carlos_V11@gmail.com' )
