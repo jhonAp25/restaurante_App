@@ -5,3 +5,18 @@ insert into Plato ( descripcion, precio) values (  'aji de gallina', 20 );
 insert into Plato ( descripcion, precio) values (   'estofado', 20 );
 insert into Plato ( descripcion, precio) values (   'pollo al horno', 20 );
 
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-01', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-02', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-03', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-04', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-05', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-06', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-07', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-08', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-09', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-10', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-11', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-12', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-13', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-14', true );
+insert into Mesa (nro_mesa, estado) values ( 'Mesa-15', true );

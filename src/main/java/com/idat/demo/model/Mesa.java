@@ -19,7 +19,12 @@ public class Mesa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nroMesa;
+    private boolean estado;
 
+    @PrePersist
+    public void prePersist() {
+        estado = true;
+    }
 
 
 }
