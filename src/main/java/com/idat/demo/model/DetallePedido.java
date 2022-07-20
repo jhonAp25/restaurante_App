@@ -33,6 +33,9 @@ public class DetallePedido {
     @ManyToOne
     private Mozo mozo;
 
+    @ManyToOne
+    private Pedido pedido;
+
 
 
 

@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @NoArgsConstructor
@@ -18,11 +19,15 @@ public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String descripcion;
+    private LocalDate fecha;
     private Double total;
 
-    @ManyToOne
-    private DetallePedido detallePedido;
+    @PrePersist
+    public void prePersist(){
+        fecha= LocalDate.now();
+    }
+
+
 
 
 }
