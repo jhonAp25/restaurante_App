@@ -38,5 +38,14 @@ public class MesaService {
         return repository.save(mesaNew);
     }
 
+    public Mesa updateEstado( Mesa mesa){
+
+        Mesa mesaNew = busqueda(mesa.getId());
+
+        mesaNew.setEstado(mesa.isEstado());
+
+        return repository.save(mesaNew);
+    }
+
 
 }

@@ -33,6 +33,11 @@ public class MesaController {
         return new ResponseEntity<>(service.save(mesa) , HttpStatus.OK);
     }
 
+    @PutMapping("/updateEstado")
+    public ResponseEntity<?> updateEstado(@RequestBody Mesa mesa){
+        return new ResponseEntity<>(service.updateEstado(mesa) , HttpStatus.OK);
+    }
+
     @PutMapping
     public ResponseEntity<?> actualizar(@RequestBody Mesa mesa){
         return new ResponseEntity<>(service.update(mesa) , HttpStatus.OK);

@@ -7,6 +7,7 @@ import com.idat.demo.repository.DetallePedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -14,6 +15,9 @@ public class DetallePedidoService {
 
     @Autowired
     private DetallePedidoRepository repository;
+
+    @Autowired
+    private PedidoService pedidoService;
 
 
 
@@ -26,8 +30,32 @@ public class DetallePedidoService {
         return repository.findById(id).orElse(null);
     }
 
+    public List<DetallePedido> filtroPedido(Long id){
+        return repository.findAllByPedidoId(id);
+    }
+
+
     public DetallePedido save( DetallePedido detallePedido){
-        return repository.save( detallePedido);
+
+        DetallePedido newDetalle = new DetallePedido();
+
+       if (pedidoService.busqueda(detallePedido.getPedido().getId()) == null ){
+
+            Pedido pedido = new Pedido();
+            pedido.setFecha(LocalDate.now());
+            pedido.setTotal(0.0);
+            newDetalle.setPedido(pedidoService.save(pedido));
+
+        }else {
+            newDetalle.setPedido(detallePedido.getPedido());
+        }
+
+        newDetalle.setCantidad(detallePedido.getCantidad());
+        newDetalle.setMesa(detallePedido.getMesa());
+        newDetalle.setMozo(detallePedido.getMozo());
+        newDetalle.setPlato(detallePedido.getPlato());
+
+        return repository.save( newDetalle);
     }
 
     public DetallePedido update( DetallePedido detallePedido){
@@ -59,6 +87,7 @@ public class DetallePedidoService {
             msj = "No existe este pedido";
         }else {
             repository.delete(detallePedido);
+            msj="Plato eliminado";
         }
 
         return msj;

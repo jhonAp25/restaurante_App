@@ -29,6 +29,11 @@ public class DetallePedidoController {
         return new ResponseEntity<>(service.busqueda(id), HttpStatus.OK);
     }
 
+    @GetMapping("/filtro/{id}")
+    public ResponseEntity<?> filtro_por_pedido(@PathVariable Long id){
+        return new ResponseEntity<>(service.filtroPedido(id), HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<?> saved(@RequestBody DetallePedido pedido){
         return new ResponseEntity<>(service.save(pedido) , HttpStatus.OK);

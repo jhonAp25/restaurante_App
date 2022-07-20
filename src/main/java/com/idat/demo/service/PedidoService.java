@@ -33,10 +33,12 @@ public class PedidoService {
 
     public Pedido update( Pedido pedido){
 
-        Pedido pedidoNew = busqueda(pedido.getId());
+        Pedido pedido1 =  busqueda(pedido.getId());
+
+        pedido1.setTotal(pedido.getTotal());
 
 
-        return repository.save(pedidoNew);
+        return repository.save(pedido1);
     }
 
 }
