@@ -35,14 +35,6 @@ public class PedidoService {
 
         Pedido pedidoNew = busqueda(pedido.getId());
 
-        if (pedido.getDescripcion() != null)
-            pedidoNew.setDescripcion(pedido.getDescripcion());
-
-        if (pedido.getTotal() != null)
-            pedidoNew.setDescripcion(pedido.getDescripcion());
-
-        if (pedido.getDetallePedido() != null)
-            pedidoNew.setDetallePedido(pedido.getDetallePedido());
 
         return repository.save(pedidoNew);
     }
