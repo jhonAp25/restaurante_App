@@ -20,7 +20,7 @@ insert into Mesa (nro_mesa, estado) values ( 'Mesa-14', true );
 insert into Mesa (nro_mesa, estado) values ( 'Mesa-15', true );
 
 
-insert into Mozo (nombre , apellido , dni, telefono, correo) values ( 'Jorge Carlos' , 'Velasques Bustillos' , '75689966', '897654321', 'Carlos_V11@gmail.com' )
+insert into Mozo (nombre , apellido , dni, telefono, correo, password) values ( 'Jorge Carlos' , 'Velasques Bustillos' , '75689966', '897654321', 'Carlos_V11@gmail.com' , '123123' );
 
 insert into Plato (nombre, descripcion, precio, image) values (  'Ceviche', 'Plato bandera del Perú, con una variedad de pescados marinos', 25 , 'https://i.imgur.com/vZqAk8n.jpg');
 insert into Plato (nombre, descripcion, precio, image) values (  'Causa Rellena', 'Plato que tiene como base un tubérculo andino combinado con pollo y mayonesa', 13 , 'https://i.imgur.com/l9tlP2y.jpg');

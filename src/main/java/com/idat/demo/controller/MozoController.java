@@ -28,6 +28,17 @@ public class MozoController {
         return new ResponseEntity<>(service.busqueda(id), HttpStatus.OK);
     }
 
+    @GetMapping("/login/{username}/{password}")
+    public ResponseEntity<?> login(@PathVariable String username , @PathVariable String password ){
+        if (service.login(username,password) != null){
+            return new ResponseEntity<>(service.login(username,password), HttpStatus.OK);
+        }else {
+            return new ResponseEntity<>("Usuario no encontrado!", HttpStatus.NOT_FOUND);
+        }
+
+
+    }
+
     @PostMapping
     public ResponseEntity<?> saved(@RequestBody Mozo mozo){
         return new ResponseEntity<>(service.save(mozo) , HttpStatus.OK);

@@ -1,7 +1,6 @@
 package com.idat.demo.service;
 
 
-import com.idat.demo.model.Mesa;
 import com.idat.demo.model.Mozo;
 import com.idat.demo.repository.MozoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,5 +48,9 @@ public class MozoService {
 
 
         return repository.save(mozoNew);
+    }
+
+    public Mozo login(String correo , String password){
+        return repository.findAllByCorreoAndPassword(correo, password);
     }
 }

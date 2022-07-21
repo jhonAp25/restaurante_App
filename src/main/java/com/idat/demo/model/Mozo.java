@@ -24,6 +24,7 @@ public class Mozo {
     private String dni;
     private String telefono;
     private String correo;
+    private String password;
 
 
 }
